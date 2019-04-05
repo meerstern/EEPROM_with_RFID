@@ -1,0 +1,13 @@
+### Module positions - created on 2019/02/16 11:26:44 ###
+### Printed by Pcbnew version kicad (5.0.2)-1
+## Unit = mm, Angle = deg.
+## Side : top
+# Ref     Val         Package                PosX       PosY       Rot  Side
+C1        C           generic-SMD1608    195.5000  -115.1000    0.0000  top
+R1        R           generic-SMD1608    195.3000  -104.6000    0.0000  top
+R2        R           generic-SMD1608    195.3000  -106.6000    0.0000  top
+R3        R           generic-SMD1608    199.5000  -115.1000  180.0000  top
+R4        R           generic-SMD1608    195.5000  -119.8000    0.0000  top
+R5        R           generic-SMD1608    195.5000  -118.0000  180.0000  top
+U1        EEPROMRFID  8                  198.3000  -110.9000   90.0000  top
+## End

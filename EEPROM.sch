@@ -1,0 +1,198 @@
+EESchema Schematic File Version 4
+LIBS:EEPROM-cache
+EELAYER 26 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 1 1
+Title "EEPROM Module with RFID"
+Date "2019-02-10"
+Rev "v1.0"
+Comp "Crescent"
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L conn:CONN_01X04 P1
+U 1 1 5C5F6D7C
+P 1900 1450
+F 0 "P1" H 1819 1815 50  0000 C CNN
+F 1 "CONN_01X04" H 1819 1724 50  0000 C CNN
+F 2 "GroveCon:GROVE" H 1900 1450 50  0001 C CNN
+F 3 "" H 1900 1450 50  0000 C CNN
+	1    1900 1450
+	-1   0    0    -1  
+$EndComp
+Text Label 2100 1300 0    50   ~ 0
+SCL
+Text Label 2100 1400 0    50   ~ 0
+SDA
+Text Label 2100 1500 0    50   ~ 0
+VDD
+Text Label 2100 1600 0    50   ~ 0
+GND
+$Comp
+L eepromrfid:EEPROMRFID U1
+U 1 1 5C5F6E7F
+P 4150 1675
+F 0 "U1" H 4425 1862 60  0000 C CNN
+F 1 "EEPROMRFID" H 4425 1756 60  0000 C CNN
+F 2 "smt-soic:8" H 4150 1675 60  0001 C CNN
+F 3 "" H 4150 1675 60  0000 C CNN
+	1    4150 1675
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R1
+U 1 1 5C5F6EF1
+P 5925 1475
+F 0 "R1" H 5995 1521 50  0000 L CNN
+F 1 "R" H 5995 1430 50  0000 L CNN
+F 2 "generic:generic-SMD1608" V 5855 1475 50  0001 C CNN
+F 3 "~" H 5925 1475 50  0001 C CNN
+	1    5925 1475
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C C1
+U 1 1 5C5F6F41
+P 5250 1600
+F 0 "C1" H 5365 1646 50  0000 L CNN
+F 1 "C" H 5365 1555 50  0000 L CNN
+F 2 "generic:generic-SMD1608" H 5288 1450 50  0001 C CNN
+F 3 "~" H 5250 1600 50  0001 C CNN
+	1    5250 1600
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3950 1875 3200 1875
+Wire Wire Line
+	3200 1875 3200 1975
+Wire Wire Line
+	3200 1975 3950 1975
+Text Label 3200 1875 0    50   ~ 0
+ANT
+Text Label 4900 1975 0    50   ~ 0
+SCL
+Text Label 4900 2075 0    50   ~ 0
+SDA
+Text Label 5925 1625 3    50   ~ 0
+SCL
+$Comp
+L Device:R R2
+U 1 1 5C5F70C7
+P 6175 1475
+F 0 "R2" H 6245 1521 50  0000 L CNN
+F 1 "R" H 6245 1430 50  0000 L CNN
+F 2 "generic:generic-SMD1608" V 6105 1475 50  0001 C CNN
+F 3 "~" H 6175 1475 50  0001 C CNN
+	1    6175 1475
+	1    0    0    -1  
+$EndComp
+Text Label 6175 1625 3    50   ~ 0
+SDA
+Text Label 5925 1100 0    50   ~ 0
+VDD
+Wire Wire Line
+	5925 1325 5925 1175
+Wire Wire Line
+	6175 1325 6175 1175
+Wire Wire Line
+	6175 1175 5925 1175
+Connection ~ 5925 1175
+Wire Wire Line
+	5925 1175 5925 1100
+$Comp
+L Device:R R3
+U 1 1 5C5F71DD
+P 6425 1475
+F 0 "R3" H 6495 1521 50  0000 L CNN
+F 1 "R" H 6495 1430 50  0000 L CNN
+F 2 "generic:generic-SMD1608" V 6355 1475 50  0001 C CNN
+F 3 "~" H 6425 1475 50  0001 C CNN
+	1    6425 1475
+	1    0    0    -1  
+$EndComp
+Text Label 4900 1875 0    50   ~ 0
+RFIO
+Text Label 6425 1625 3    50   ~ 0
+RFIO
+Wire Wire Line
+	6425 1325 6425 1175
+Wire Wire Line
+	6425 1175 6175 1175
+Connection ~ 6175 1175
+Text Label 4900 1775 0    50   ~ 0
+VDD
+Text Label 5250 1450 0    50   ~ 0
+VDD
+Text Label 5250 1750 0    50   ~ 0
+GND
+Text Label 3950 2075 2    50   ~ 0
+GND
+Text Label 3950 1775 2    50   ~ 0
+VOUT
+$Comp
+L conn:TEST_1P TP1
+U 1 1 5C5F74A3
+P 5725 2450
+F 0 "TP1" H 5783 2524 50  0000 L CNN
+F 1 "TEST_1P" H 5783 2479 50  0001 L CNN
+F 2 "pin-head:pinhead-1X01" H 5925 2450 50  0001 C CNN
+F 3 "" H 5925 2450 50  0000 C CNN
+	1    5725 2450
+	1    0    0    -1  
+$EndComp
+Text Label 5725 2450 2    50   ~ 0
+VOUT
+$Comp
+L conn:TEST_1P TP2
+U 1 1 5C5F7525
+P 6000 2450
+F 0 "TP2" H 6058 2524 50  0000 L CNN
+F 1 "TEST_1P" H 6058 2479 50  0001 L CNN
+F 2 "pin-head:pinhead-1X01" H 6200 2450 50  0001 C CNN
+F 3 "" H 6200 2450 50  0000 C CNN
+	1    6000 2450
+	1    0    0    -1  
+$EndComp
+Text Label 6000 2450 0    50   ~ 0
+RFIO
+$Comp
+L Device:R R4
+U 1 1 5C655F72
+P 6675 1475
+F 0 "R4" H 6745 1521 50  0000 L CNN
+F 1 "R" H 6745 1430 50  0000 L CNN
+F 2 "generic:generic-SMD1608" V 6605 1475 50  0001 C CNN
+F 3 "~" H 6675 1475 50  0001 C CNN
+	1    6675 1475
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R5
+U 1 1 5C655FB1
+P 6675 1975
+F 0 "R5" H 6745 2021 50  0000 L CNN
+F 1 "R" H 6745 1930 50  0000 L CNN
+F 2 "generic:generic-SMD1608" V 6605 1975 50  0001 C CNN
+F 3 "~" H 6675 1975 50  0001 C CNN
+	1    6675 1975
+	1    0    0    -1  
+$EndComp
+Text Label 6675 1750 2    50   ~ 0
+VOUT
+Text Label 6675 2225 0    50   ~ 0
+GND
+Wire Wire Line
+	6425 1175 6675 1175
+Wire Wire Line
+	6675 1175 6675 1325
+Connection ~ 6425 1175
+Wire Wire Line
+	6675 1625 6675 1825
+Wire Wire Line
+	6675 2125 6675 2225
+$EndSCHEMATC
