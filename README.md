@@ -11,7 +11,7 @@ NDEF(NFC Data Exchange Format)方式で書き込むためには数10kバイト�
 そのため、ArduinoUNO、PIC、F3以下のSTM32マイコン等での動作保証はできません。  
 URLを書き込むSTM32F401のサンプルコードを用意しています。  
 
-[EEPROM M24SR64][1]はISO 14443 NFC/RFID tag NFC forum Type 4 に対応しており、Felicaと同等規格です。
+[EEPROM M24SR64][1]はISO 14443 NFC/RFID tag NFC forum Type 4 に対応しています。
   
 なお、NFCリーダ/ライタはNFCタグやNFCカードを駆動させる電波を発するため技適が必要ですが、  
 本モジュールはパッシブ(NFCタグやNFCカード側)のため、技適は不要です。  
