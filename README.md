@@ -6,7 +6,7 @@ EEPROMにI2CとRFIDの2つの通信で内部のデータにアクセスできま
 RFIDの通信の場合はEEPROMに電源を供給せずともRFIDの電波でそのままパッシブにEEPROMが動作します。  
 
 一般的なEEPROMと異なり、NDEF(NFC Data Exchange Format)方式でEEPROMにデータを書き込む必要があります。  
-一般的なEEPROMの様にバイト、ページ単位での書き込みには対応していません。
+一般的なEEPROMの様にバイト、ページ単位での書き込みには対応していません。  
 NDEF(NFC Data Exchange Format)方式で書き込むためには数10kバイト以上のRAMメモリ領域が必要です。  
 そのため、ArduinoUNO、PIC、F3以下のSTM32マイコン等での動作保証はできません。  
 URLを書き込むSTM32F401のサンプルコードを用意しています。  
